@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define LOWER 1
@@ -20,8 +19,6 @@
 };
 
 &lt { tapping-term-ms = <300>; };
-
-&inc_dec_kp { tap-ms = <10>; };
 
 / {
     // Activate ADJUST layer by pressing raise and lower
