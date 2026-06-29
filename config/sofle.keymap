@@ -24,13 +24,13 @@
     // Activate ADJUST layer by pressing raise and lower
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
-    behaviors {
-        scroll_encoder: scroll_encoder {
+behaviors {
+    scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc INPUT_REL_WHEEL>;
-        };
+        bindings = <&msc 1>, <&msc -1>;
     };
+};
     keymap {
         compatible = "zmk,keymap";
 
