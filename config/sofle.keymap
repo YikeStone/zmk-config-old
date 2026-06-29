@@ -28,7 +28,7 @@ behaviors {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc 1>, <&msc -1>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
     };
 };
     keymap {
