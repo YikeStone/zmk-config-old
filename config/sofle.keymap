@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
@@ -24,13 +25,15 @@
     // Activate ADJUST layer by pressing raise and lower
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
-behaviors {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+    behaviors {
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
     };
-};
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,7 +52,7 @@ behaviors {
 &kp EQUAL  &kp Q   &kp W         &kp E      &kp R         &kp T                                     &kp Y      &kp U          &kp I             &kp O              &kp P     &kp BACKSLASH
 &kp DEL    &kp A   &kp S         &kp D      &kp F         &kp G                                     &kp H      &kp J          &kp K             &kp L              &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X         &kp C      &kp V         &kp B      &kp LC(UP_ARROW)    &to 1      &kp N      &kp M          &kp COMMA         &kp DOT            &kp FSLH  &kp RSHFT
-                   &kp LEFT_ALT  &kp SPACE  &kp LEFT_WIN  &lt 2 TAB  &mt LCTRL ESCAPE    &kp ENTER  &kp SPACE  &kp BACKSPACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                   &kp LEFT_ALT  &kp SPACE  &kp LEFT_WIN  &lt 3 TAB  &mt LCTRL ESCAPE    &kp ENTER  &kp SPACE  &kp BACKSPACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings =
